@@ -1,0 +1,11 @@
+- name: Procreate
+  percentage: 70
+  color: info
+
+- name: Adobe Illustrator
+  percentage: 30
+  color: info
+
+- name: live2D
+  percentage: 50
+  color:

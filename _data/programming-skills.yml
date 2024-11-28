@@ -1,0 +1,11 @@
+- name: HTML/CSS
+  percentage: 50
+  color: info
+
+- name: Javascript
+  percentage: 30
+  color:
+
+- name: Python/C++
+  percentage: 30
+  color: secondary
