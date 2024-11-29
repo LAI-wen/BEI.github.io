@@ -2,7 +2,7 @@
 title: 被被蓋被子
 description: >-
   Shall I compare thee to a summer's day?
-baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+baseurl: "/BEI.github.io" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository: LAI-wen/BEI.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 # remote_theme: yousinix/portfolYOU
 open_new_tab: false # Opens external URLs in new tab (works for posts, projects and navbar only)
