@@ -1,7 +1,11 @@
 ---
-name: Empty Project
-tools: [Node JS, JavaScript, HTML, CSS]
+name: 動手製造 AI 君
+tools: [llama, llama.cpp]
 image:
-description: This project has no image or showcase page, but it is still a beautiful project inside out!
+description: 如何客製化 AI 君
 external_url:
 ---
+
+# 動手製造 AI 君
+
+(進行中)

@@ -1,20 +1,18 @@
 ---
-name: The Movies Project
-tools: [C#, XML, WPF]
+name: 做一下遊戲
+tools: [RPG maker, Unity, mosi]
 image:
-description: This project has an individual showcase page, not just a direct link to the project site or repo. Now you have more space to describe your awesome project!
+description: 紀錄學習 & 好用素材、教學
 ---
 
-# The Movies Project
+# 做遊戲
 
-The Movies Project is something like **Netflix**, the only difference is that **it's not real**! It doesn't exist! I just created it to demonstrate how the **showcase** page looks like and how you can write whatever you want with full markdown support.
+## 🅳🅸🆁🅴🅲🆃🅾🆁🆈
 
-![preview](https://www.sketchappsources.com/resources/source-image/we-were-soldiers-landing-page-dbruggisser.jpg)
+## RM
 
-## Search Movies
+(待整理)
 
-![search](https://www.sketchappsources.com/resources/source-image/microsoft-windows-10-virtual-keyboard-diogo-sousa.png)
+## mosi
 
-<p class="text-center">
-{% include elements/button.html link="https://github.com/yousinix/portfolYOU" text="Learn More" %}
-</p>
+(待整理)

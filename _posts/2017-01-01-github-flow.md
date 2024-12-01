@@ -1,67 +1,92 @@
 ---
-title: GitHub Flow
-tags: [GitHub, Workflow]
+title: GitHub Flow 工作流程
+tags: [Developer Guide, Git, 好文章翻譯]
 style: fill
-color: primary
+color: info
 description: GitHub Flow is a lightweight, branch-based workflow that supports teams and projects where deployments are made regularly. This guide explains how and why GitHub Flow works.
 ---
 
-Source: [GitHub Guides](https://guides.github.com/introduction/flow/)
+---
 
-## Create a branch
+### **GitHub Flow 工作流程**
 
-When you're working on a project, you're going to have a bunch of different features or ideas in progress at any given time – some of which are ready to go, and others which are not. Branching exists to help you manage this workflow.
+**標籤**：GitHub、工作流  
+**風格**：填充  
+**色彩**：主題  
+**描述**：GitHub Flow 是一種輕量級、基於分支的工作流程，適用於需要定期部署的團隊與專案。此指南解釋了其工作原理及原因。
 
-When you create a branch in your project, you're creating an environment where you can try out new ideas. Changes you make on a branch don't affect the `master` branch, so you're free to experiment and commit changes, safe in the knowledge that your branch won't be merged until it's ready to be reviewed by someone you're collaborating with.
+---
 
-#### ProTip
+**來源**：[GitHub Guides](https://guides.github.com/introduction/flow/)
 
-Branching is a core concept in Git, and the entire GitHub flow is based upon it. There's only one rule: anything in the `master` branch is always deployable.
+---
 
-Because of this, it's extremely important that your new branch is created off of master when working on a feature or a fix. Your branch name should be descriptive (e.g., `refactor-authentication`, `user-content-cache-key`, `make-retina-avatars`), so that others can see what is being worked on.
+### **1. 建立分支**
 
-## Add commits
+在專案開發中，經常會有多個功能或想法同時進行——有些已準備好發布，而另一些則還未完成。分支的存在就是為了幫助管理這樣的工作流程。
 
-Once your branch has been created, it's time to start making changes. Whenever you add, edit, or delete a file, you're making a commit, and adding them to your branch. This process of adding commits keeps track of your progress as you work on a feature branch.
+當你在專案中建立一個分支時，便創造了一個可以嘗試新想法的環境。在分支上的更改不會影響主分支（`master`），因此你可以放心地試驗和提交更改，而無需擔心在準備好前被合併。
 
-Commits also create a transparent history of your work that others can follow to understand what you've done and why. Each commit has an associated commit message, which is a description explaining why a particular change was made. Furthermore, each commit is considered a separate unit of change. This lets you roll back changes if a bug is found, or if you decide to head in a different direction.
+#### **提示：**
 
-#### ProTip
+- 分支是 Git 的核心概念，也是 GitHub Flow 的基礎。唯一的規則是：`master` 分支上的內容必須始終可部署。
+- 因此，在處理功能或修復時，務必從 `master` 分支建立新分支，並使用描述性名稱（例如 `refactor-authentication`、`user-content-cache-key` 或 `make-retina-avatars`），方便他人了解工作內容。
 
-Commit messages are important, especially since Git tracks your changes and then displays them as commits once they're pushed to the server. By writing clear commit messages, you can make it easier for other people to follow along and provide feedback.
+---
 
-## Open a Pull Request
+### **2. 添加提交**
 
-Pull Requests initiate discussion about your commits. Because they're tightly integrated with the underlying Git repository, anyone can see exactly what changes would be merged if they accept your request.
+建立分支後，即可開始進行更改。每當新增、編輯或刪除檔案時，實際上就是進行了一次提交（commit），並將其添加到你的分支。這個提交過程可以記錄你的開發進度。
 
-You can open a Pull Request at any point during the development process: when you have little or no code but want to share some screenshots or general ideas, when you're stuck and need help or advice, or when you're ready for someone to review your work. By using GitHub's @mention system in your Pull Request message, you can ask for feedback from specific people or teams, whether they're down the hall or ten time zones away.
+提交不僅能建立透明的工作歷史，讓其他人了解更改內容及原因，也是一個獨立的更改單元。如果發現問題或需要改變方向，可以隨時回滾更改。
 
-#### ProTip
+#### **提示：**
 
-Pull Requests are useful for contributing to open source projects and for managing changes to shared repositories. If you're using a Fork & Pull Model, Pull Requests provide a way to notify project maintainers about the changes you'd like them to consider. If you're using a Shared Repository Model, Pull Requests help start code review and conversation about proposed changes before they're merged into the master branch.
+- 提交訊息很重要，因為 Git 會跟蹤你的更改並在推送到伺服器後顯示它們。
+- 撰寫清晰的提交訊息，有助於他人理解你的進度並提供反饋。
 
-## Discuss and review your code
+---
 
-Once a Pull Request has been opened, the person or team reviewing your changes may have questions or comments. Perhaps the coding style doesn't match project guidelines, the change is missing unit tests, or maybe everything looks great and props are in order. Pull Requests are designed to encourage and capture this type of conversation.
+### **3. 開啟 Pull Request**
 
-You can also continue to push to your branch in light of discussion and feedback about your commits. If someone comments that you forgot to do something or if there is a bug in the code, you can fix it in your branch and push up the change. GitHub will show your new commits and any additional feedback you may receive in the unified Pull Request view.
+Pull Request（PR）可用來發起對提交的討論。由於它們與底層 Git 儲存庫緊密結合，任何人都可以清楚地看到若接受請求將合併哪些更改。
 
-#### ProTip
+無論是在開發過程的早期階段（例如分享截圖或想法）、遇到困難需要幫助，還是準備讓他人審查工作時，都可以開啟 PR。透過 GitHub 的 @mention 系統，你可以向特定人員或團隊請求反饋。
 
-Pull Request comments are written in Markdown, so you can embed images and emoji, use pre-formatted text blocks, and other lightweight formatting.
+#### **提示：**
 
-## Deploy
+- 對於開源專案和共享儲存庫管理，PR 十分有用。在 Fork & Pull 模式中，PR 提供了一種通知專案管理者所提議更改的方式。在共享儲存庫模式中，PR 促進代碼審查並討論更改內容。
 
-With GitHub, you can deploy from a branch for final testing in production before merging to master.
+---
 
-Once your pull request has been reviewed and the branch passes your tests, you can deploy your changes to verify them in production. If your branch causes issues, you can roll it back by deploying the existing master into production.
+### **4. 討論並審查代碼**
 
-## Merge
+PR 開啟後，負責審查更改的人或團隊可能會提出問題或意見，例如：
 
-Now that your changes have been verified in production, it is time to merge your code into the master branch.
+- 代碼風格不符合專案規範
+- 更改缺乏單元測試
+- 或者一切看起來都很好
 
-Once merged, Pull Requests preserve a record of the historical changes to your code. Because they're searchable, they let anyone go back in time to understand why and how a decision was made.
+PR 的設計是為了鼓勵和記錄這些討論。你還可以根據反饋繼續在分支上推送新的提交，GitHub 將在統一的 PR 視圖中顯示新的提交及進一步的反饋。
 
-#### ProTip
+#### **提示：**
 
-By incorporating certain keywords into the text of your Pull Request, you can associate issues with code. When your Pull Request is merged, the related issues are also closed. For example, entering the phrase `Closes #32` would close issue number 32 in the repository.
+- PR 註解支持 Markdown，可以嵌入圖片、表情符號，或使用預格式化的文本塊進行輕量級排版。
+
+---
+
+### **5. 部署**
+
+在合併到 `master` 之前，GitHub 支持從分支部署到生產環境進行最終測試。如果分支的更改引發問題，可以通過重新部署現有的 `master` 版本進行回滾。
+
+---
+
+### **6. 合併**
+
+當分支更改通過測試並完成驗證後，就可以將代碼合併到 `master` 分支中。一旦合併，PR 將保留代碼歷史的完整記錄，且可供搜尋，方便回顧決策過程。
+
+#### **提示：**
+
+- 在 PR 文本中添加特定關鍵字（如 `Closes #32`），可以將 PR 與相關問題關聯，合併後會自動關閉該問題。
+
+---

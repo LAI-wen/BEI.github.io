@@ -1,102 +1,85 @@
 ---
 title: Clean Coding
-tags: [Software Development, Clean Code]
+tags: [Developer Guide, 好文章翻譯]
 style: fill
 color: info
 description: These four “clean code” tips will dramatically improve your engineering team’s productivity
 ---
 
-Source: [Jonathan Fulton](https://engineering.videoblocks.com/these-four-clean-code-tips-will-dramatically-improve-your-engineering-teams-productivity-b5bd121dd150)
+來源：[Jonathan Fulton](https://engineering.videoblocks.com/these-four-clean-code-tips-will-dramatically-improve-your-engineering-teams-productivity-b5bd121dd150)
 
-A few years ago at VideoBlocks we had a major code quality problem: “spaghetti” logic in most files, tons of duplication, no tests and more. Writing new features and even minor bug fixes required a couple of Tums at best and entire bottles of Pepto-Bismol and Scotch far too often. Our WTFs per minute were sky-high.
-
-{% include elements/figure.html image="https://cdn-images-1.medium.com/max/1600/1*J2mKSLBEp_jUbMtOWXTTjQ.png" caption="Several years ago we were definitely in the room on the right but we’ve moved a lot closer to the room on the left." %}
-
-Today, the overall quality of our codebases are significantly better thanks in large part to a deliberate effort to improve code quality. A couple ago when we identified the problem, we read Robert Martin’s Clean Code as a team and did our best to implement his recommendations and even introduced “clean code” as a core cultural tenant for the engineering team. I highly recommend doing both as you start scaling. Implementing “clean code” practices appropriately will double productivity in the long run (at a bare minimum) and significantly improve moral on the engineering team. Who wants to be in the room on the right given the choice?
-
-Out of all the ideas we implemented from Clean Code and other sources, five provided at least 80% of the gains in productivity and team happiness.
-
-1. **“If it isn’t tested, it’s broken”**  
-    Write lots of tests, especially unit tests, or you’ll regret it.
-1. **Choose meaningful names**  
-    Use short and precise names for variables, classes, and functions.
-1. **Classes and functions should be small and obey the Single Responsibility Principle (SRP)**  
-    Functions should be no more than 4 lines and classes no more than 100 lines. Yep, you read that correctly. They should also do one and only one thing.
-1. **Functions should have no side effects**  
-    Side effects (e.g., modifying an input argument) are evil. Make sure not to have them in your code. Specify this explicitly in the function contracts where possible (e.g., pass in native types or objects that have no setters)
-
-Let’s walk through each one in detail so you can understand and start applying them in your day-to-day life on an engineering team.
-
-## 1. “If it isn’t tested, it’s broken”
-
-I started regularly repeating this sentence to our engineers as we encountered bugs that should’ve been caught by (nonexistent) tests. You too will prove the quote true again and again unless you build a culture of testing. Write a lot of tests, especially unit tests. Think very hard about integration tests and make sure you have a sufficient number in place to cover your core business functionality. Remember, if there’s not test coverage for a piece of code you’ll likely break it in the future without realizing it until your customers find the bug.
-
-Repeat “if it isn’t tested, it’s broken” to your team over and over until the message sinks in. Practice what you preach, whether you’re a brand new software engineer straight out of school or a grizzled veteran.
-
-## 2. Choose meaningful names
-
-> There are two hard problems in Computer Science: cache invalidation and naming things.
-
-You may have heard this quote before and it couldn’t be more relevant to your day-to-day life on an engineering team. If you and your team aren’t good at naming things in your code, it will become an unmaintainable nightmare and you won’t get anything done. You’ll lose your best developers and your company will soon go out of business.
-
-Seriously though, friends don’t let friends use bad variable names like data, foobar, or myNumber and they most certainly don’t let them name classes things like SomethingManager. Make sure your names are short and precise, but when in conflict favor precision. Strongly optimize around developer efficiency and make it easy to find files via “find by name” IDE shortcuts. Enforce good naming stringently with code reviews.
-
-## 3. Classes and functions should be small and obey the Single Responsibility Principle (SRP)
-
-Small and SRP go together like a chicken and an egg, a virtuous cycle of deliciousness. Let’s start with small.
-
-What does “small” mean for functions? No more than 4 lines of code. Yep, you read that correctly, 4 lines. You’re probably closing the tab right now but you really shouldn’t. It seems somewhat arbitrary and small and you’ve probably never written code like that in your life. However, 4-line functions force you to think hard and pick a lot of really good names for sub-functions that make your code self-documenting. Additionally, they mean you can’t use nested IF statements that force you to do mental gymnastics to understand all the code paths.
-
-Let’s walk through an example together. Node has an npm module called “build-url” which is used for doing exactly what it’s name suggests: it builds URLs. You can find the link to the source file we’re going to look at here. Below is the relevant code.
-
-{% gist 53b03db644353af05279f8fe3eea1a09 %}
-
-Notice that this function is 35 lines long. It’s not too hard to understand but it could be significantly easier to reason about if we apply our “small” principle to factor out helper functions. Here’s the updated and improved version.
-
-{% gist 167dc8833b9058eafc5cdebc3a2609a9 %}
-
-You’ll notice that while we didn’t adhere strictly to the 4 lines per function rule, we did create several functions that are relatively “small”. Each one does exactly one task that’s easy to understand based on it’s name. You could even unit test each of these smaller functions independently if you wanted, as opposed to only being able to test the one large buildUrl function. You may also notice that this methodology produces slightly more code, 55 lines instead of 35. That’s perfectly acceptable because those 55 lines are a lot more maintainable and easier to read the the 35 lines.
-
-How do you write code like this? I personally find it easiest to write the list of steps down that you need to accomplish the task you’re hoping to do. Each of these steps might be a good candidate for a sub/helper function. For instance, we could describe the buildUrl function as follows:
-
-1. Initialize our base url and options
-1. Add the path (if any)
-1. Add the query parameters (if any)
-1. Add the hash (if any)
-
-Notice how each of these steps translates almost directly into a sub-function. Once you get in the habit, you’ll eventually write all of your code using this top-down approach where you create a list of steps, stub the functions, and continue recursively like this into each of the sub-functions creating a list of steps, stubbing, and so on.
-
-Moving on to our related concept, the Single Responsibility Principle. What does this mean? Quoting directly from Wikipedia:
-
-> The Single Responsibility Principle (SRP) is a computer programming principle that states that every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class. All its services should be narrowly aligned with that responsibility.
-
-Robert Martin in Clean Code provides a parallel definition:
-
-> The SRP states that a class or module should one, and only one, reason to change.
-
-Let’s say we’re building a system that needs to a certain type of report and display it. A naive approach might be to build a single module/class that stores the report data as well as the logic for displaying the report. However, that violates SRP because there are two high level reasons to modify the class. First, if the report fields change, we’ll need to update it. Second, if the report visualization requirements change, we’ll need to update the class. Therefore instead of a single class to store both the data and the logic for rendering the data, we should split those concepts and areas of ownership into two different classes, say ReportData and ReportDataRenderer or something similar.
-
-## 4. Functions should have no side effects
-
-Side effects are truly evil and make it extremely difficult to create code without bugs. Check out the example below. Can you spot the side effect?
-
-{% gist 63706c9490634bc48f768051256dbdf1 %}
-
-The function as named is designed to look up a user by email/password combination, a standard operation for any web application. However, it also has a hidden side effect that you do not know about as the function consumer without reading the implementation code: it logs the user in, which creates a login token, adds it to the database, and sends a cookie back to our user with the value so they’re subsequently “logged in”.
-
-There are many things wrong with this.
-
-First, the function contract/interface is not easily understood without reading the implementation code. Even if the login side-effect is documented, though, it’s still not ideal. Engineers tend to use intellisense in modern IDEs so won’t think they need to read the documentation based on the simple function name. They’ll tend to use the function solely to fetch the user object, failing to realize that they’re adding a cookie to the request which can lead to all sorts of fun hard-to-find bugs.
-
-Second, testing the function is fairly challenging given all the dependencies. Verifying that you can look a user up by email/password requires mocking out an HTTP response as well as handling the writes to the login token table.
-
-Third, the tight coupling between user lookup and login inevitably won’t satisfy all use cases in the future, where you’ll likely need to look up a user or login a user independently. In other words, it’s not “future proof”.
+這是翻譯喔
 
 ---
 
-In summary, make sure to remember and apply these four “clean code” principles to dramatically improve your team’s productivity:
+幾年前，我們的團隊 VideoBlocks 面臨了嚴重的程式碼品質問題：幾乎所有檔案都充斥著「義大利麵」邏輯、大量重複程式碼、完全沒有測試等等。開發新功能甚至修復小錯誤，都需要吃胃藥，還經常需要配威士忌才能挺過去。我們的「WTF 每分鐘」指數高得令人咋舌。
 
-1. **“If it isn’t tested, it’s broken”**
-1. **Choose meaningful names**
-1. **Classes and functions should be small and obey the Single Responsibility Principle (SRP)**
-1. **Functions should have no side effects**
+{% include elements/figure.html image="https://cdn-images-1.medium.com/max/1600/1*J2mKSLBEp_jUbMtOWXTTjQ.png" caption="幾年前，我們的狀況更接近右邊的房間，但現在我們已經接近左邊的房間了。" %}
+
+如今，透過有意識地提升程式碼品質，我們的程式碼基礎結構已顯著改善。我們團隊共同閱讀了 Robert Martin 的 **《Clean Code》** 並盡力實施他的建議，甚至將「乾淨編碼」納入工程團隊的核心文化準則。我強烈建議，在你的團隊開始擴展時，也應該採取這些措施。適當地實踐乾淨編碼原則，至少能讓生產力翻倍，並大幅提高工程師的士氣。畢竟，如果可以選擇，誰願意待在右邊那樣的房間裡？
+
+---
+
+以下是我們從 **《Clean Code》** 和其他來源實施的四個原則，這些原則貢獻了至少 80% 的生產力提升和團隊滿意度：
+
+1. **「如果沒有測試，就等於壞掉了」**  
+   撰寫大量測試，尤其是單元測試，否則你會後悔。
+2. **選擇有意義的名稱**  
+   使用簡短而精確的名稱來命名變數、類別和函式。
+3. **類別和函式應該小且遵循單一職責原則 (SRP)**  
+   函式不應超過 4 行，類別不應超過 100 行，並且每個函式/類別應只執行一項任務。
+4. **函式不應有副作用**  
+   副作用（如修改輸入參數）會引發問題，請避免在程式碼中出現。
+
+接下來，我們逐一詳解這些原則，讓你了解如何在日常開發中應用它們。
+
+---
+
+## 1. 「如果沒有測試，就等於壞掉了」
+
+這句話在我們團隊裡已經成為口頭禪。我們曾遇到無數應該被測試攔截的問題，但這些測試根本不存在。建立測試文化至關重要。請撰寫大量測試，尤其是單元測試，並特別留意核心業務功能的整合測試。記住，沒有測試覆蓋的程式碼，很可能會在未來被你無意間改壞，直到客戶發現錯誤。
+
+在你的團隊中反覆強調這句話，讓大家意識到測試的重要性。
+
+---
+
+## 2. 選擇有意義的名稱
+
+> 「計算機科學中有兩個困難問題：緩存失效和命名。」
+
+如果你的團隊命名能力不佳，程式碼將變得不可維護，團隊效率下降，你可能會失去最好的工程師，甚至公司可能因此倒閉。
+
+千萬不要用糟糕的變數名稱，例如 `data`、`foobar` 或 `myNumber`，更不要用「萬能管理器」名稱，如 `SomethingManager`。名稱應簡短且精確；若發生衝突，以精確為主。透過代碼審查來嚴格執行命名規範。
+
+---
+
+## 3. 類別和函式應該小且遵循單一職責原則 (SRP)
+
+「小」和「SRP」如同雞與蛋的良性循環。
+
+### 小函式
+
+函式應不超過 4 行程式碼。雖然這可能看起來過於嚴苛，但這樣的限制迫使你使用清晰的名稱來分解任務，讓程式碼變得自解釋。此外，它還避免了深層嵌套的 `if` 語句，降低理解代碼的難度。
+
+---
+
+### 單一職責原則 (SRP)
+
+SRP 的定義為：「每個類別或模組應僅負責單一的功能，且僅有一個理由會使其變更。」例如，將報表資料邏輯和呈現邏輯分開，而非混合在一個類別中。
+
+---
+
+## 4. 函式不應有副作用
+
+副作用使程式碼難以維護並易於出錯。例如，某函式在執行查詢時，同時隱含地進行了使用者登入操作。這種設計不僅增加測試難度，也容易造成未來功能需求的耦合問題。
+
+---
+
+### 總結
+
+記住並應用這四個乾淨編碼原則，可以顯著提升團隊的生產力和程式碼品質：
+
+1. **「如果沒有測試，就等於壞掉了」**
+2. **選擇有意義的名稱**
+3. **類別和函式應該小且遵循單一職責原則 (SRP)**
+4. **函式不應有副作用**

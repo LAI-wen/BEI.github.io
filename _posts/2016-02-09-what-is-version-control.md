@@ -1,44 +1,59 @@
 ---
-title: What is version control?
-tags: [Version Control]
+title: 什麼是版本控制
+tags: [Developer Guide, 好文章翻譯]
 style: fill
-color: secondary
+color: info
 comments: true
 description: Benefits of version control and version control systems.
 ---
 
-Source: [atlassian](https://www.atlassian.com/git/tutorials/what-is-version-control)
+**來源**：[Atlassian](https://www.atlassian.com/git/tutorials/what-is-version-control)  
+是翻譯喔
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:34e935dd-3108-40ef-bb3d-9ed01d977d6d/hero.svg?cdnVersion=la)
 
-## Benefits of version control
+---
 
-Version control systems are a category of software tools that help a software team manage changes to source code over time. Version control software keeps track of every modification to the code in a special kind of database. If a mistake is made, developers can turn back the clock and compare earlier versions of the code to help fix the mistake while minimizing disruption to all team members.
+### **版本控制的好處**
 
-For almost all software projects, the source code is like the crown jewels - a precious asset whose value must be protected. For most software teams, the source code is a repository of the invaluable knowledge and understanding about the problem domain that the developers have collected and refined through careful effort. Version control protects source code from both catastrophe and the casual degradation of human error and unintended consequences.
+版本控制系統是一類軟體工具，用於幫助軟體團隊管理源代碼隨時間推移的變更。它們會將每次代碼修改記錄在一種特殊的數據庫中。如果出現錯誤，開發者可以「回到過去」，比對較早的代碼版本，從而修復錯誤並將對團隊的干擾降到最低。
 
-Software developers working in teams are continually writing new source code and changing existing source code. The code for a project, app or software component is typically organized in a folder structure or "file tree". One developer on the team may be working on a new feature while another developer fixes an unrelated bug by changing code, each developer may make their changes in several parts of the file tree.
+對於幾乎所有軟體專案來說，源代碼就像珍貴的「皇冠上的珠寶」，其價值必須受到保護。對大多數開發團隊而言，源代碼代表了開發者通過謹慎努力收集並精煉的問題領域的寶貴知識。版本控制不僅能保護源代碼免於災難，也能防止因人為錯誤或意外後果造成的損失。
 
-Version control helps teams solve these kinds of problems, tracking every individual change by each contributor and helping prevent concurrent work from conflicting. Changes made in one part of the software can be incompatible with those made by another developer working at the same time. This problem should be discovered and solved in an orderly manner without blocking the work of the rest of the team. Further, in all software development, any change can introduce new bugs on its own and new software can't be trusted until it's tested. So testing and development proceed together until a new version is ready.
+軟體開發團隊中的開發者經常需要撰寫新代碼或修改現有代碼。專案、應用程式或軟體元件的代碼通常以文件夾結構或「文件樹」形式組織。一位開發者可能在開發新功能，另一位則可能在修復不相關的漏洞，而每位開發者可能會修改文件樹中的多個部分。
 
-Good version control software supports a developer's preferred workflow without imposing one particular way of working. Ideally it also works on any platform, rather than dictate what operating system or tool chain developers must use. Great version control systems facilitate a smooth and continuous flow of changes to the code rather than the frustrating and clumsy mechanism of file locking - giving the green light to one developer at the expense of blocking the progress of others.
+版本控制可以幫助團隊解決這些問題，記錄每位貢獻者的單獨更改，並防止同時工作的內容發生衝突。一位開發者在軟體某部分的更改，可能與另一位開發者的工作不兼容。這類問題應該以有序方式解決，而不是阻礙整個團隊的進度。此外，任何更改都有可能引入新的錯誤，新軟體在測試通過之前不可完全信任。因此，測試與開發需同步進行，直到新版本準備就緒。
 
-Software teams that do not use any form of version control often run into problems like not knowing which changes that have been made are available to users or the creation of incompatible changes between two unrelated pieces of work that must then be painstakingly untangled and reworked. If you're a developer who has never used version control you may have added versions to your files, perhaps with suffixes like "final" or "latest" and then had to later deal with a new final version. Perhaps you've commented out code blocks because you want to disable certain functionality without deleting the code, fearing that there may be a use for it later. Version control is a way out of these problems.
+優秀的版本控制軟體應支持開發者喜好的工作流程，而非強制特定方式運作。理想情況下，它還能在任何平台上運行，而不限制開發者使用特定作業系統或工具鏈。高效的版本控制系統能平滑地管理代碼變更，而非採用阻礙進度的文件鎖定機制，避免以犧牲其他開發者效率為代價，來允許單個開發者進行修改。
 
-Version control software is an essential part of the every-day of the modern software team's professional practices. Individual software developers who are accustomed to working with a capable version control system in their teams typically recognize the incredible value version control also gives them even on small solo projects. Once accustomed to the powerful benefits of version control systems, many developers wouldn't consider working without it even for non-software projects.
+不使用版本控制的軟體團隊，經常會遇到以下問題：
 
-## Benefits of version control systems
+- 無法確定哪些更改已被用戶採用
+- 不相關的工作之間可能生成不兼容的更改，進而需要費力解決
 
-Developing software without using version control is risky, like not having backups. Version control can also enable developers to move faster and it allows software teams to preserve efficiency and agility as the team scales to include more developers.
+如果你從未使用過版本控制，或許會以「final」或「latest」等後綴為文件命名版本，後來又要面對更多「最終版本」的問題；或者曾經將代碼塊註解掉，僅僅因為擔心將來可能還有用處。版本控制可以幫助解決這些問題。
 
-Version Control Systems (VCS) have seen great improvements over the past few decades and some are better than others. VCS are sometimes known as SCM (Source Code Management) tools or RCS (Revision Control System). One of the most popular VCS tools in use today is called Git. Git is a Distributed VCS, a category known as DVCS, more on that later. Like many of the most popular VCS systems available today, Git is free and open source. Regardless of what they are called, or which system is used, the primary benefits you should expect from version control are as follows.
+版本控制軟體是現代開發團隊的基本工具。習慣使用版本控制系統的開發者，即使在個人項目中，也能從中獲益。一旦體驗到其強大功能，多數開發者甚至會在非軟體專案中也不願放棄使用。
 
-1. A complete long-term change history of every file. This means every change made by many individuals over the years. Changes include the creation and deletion of files as well as edits to their contents. Different VCS tools differ on how well they handle renaming and moving of files. This history should also include the author, date and written notes on the purpose of each change. Having the complete history enables going back to previous versions to help in root cause analysis for bugs and it is crucial when needing to fix problems in older versions of software. If the software is being actively worked on, almost everything can be considered an "older version" of the software.
+---
 
-1. Branching and merging. Having team members work concurrently is a no-brainer, but even individuals working on their own can benefit from the ability to work on independent streams of changes. Creating a "branch" in VCS tools keeps multiple streams of work independent from each other while also providing the facility to merge that work back together, enabling developers to verify that the changes on each branch do not conflict. Many software teams adopt a practice of branching for each feature or perhaps branching for each release, or both. There are many different workflows that teams can choose from when they decide how to make use of branching and merging facilities in VCS.
+### **版本控制系統的好處**
 
-1. Traceability. Being able to trace each change made to the software and connect it to project management and bug tracking software such as Jira, and being able to annotate each change with a message describing the purpose and intent of the change can help not only with root cause analysis and other forensics. Having the annotated history of the code at your fingertips when you are reading the code, trying to understand what it is doing and why it is so designed can enable developers to make correct and harmonious changes that are in accord with the intended long-term design of the system. This can be especially important for working effectively with legacy code and is crucial in enabling developers to estimate future work with any accuracy.
+不使用版本控制來開發軟體風險極高，就像不備份一樣危險。版本控制不僅可以保護代碼，還能讓開發團隊在人數增加時保持效率與靈活性。
 
-While it is possible to develop software without using any version control, doing so subjects the project to a huge risk that no professional team would be advised to accept. So the question is not whether to use version control but which version control system to use.
+版本控制系統（VCS）經歷了幾十年的改進，有些比其他的更出色。VCS 也被稱為 SCM（源代碼管理工具）或 RCS（修訂控制系統）。目前最受歡迎的 VCS 工具之一是 Git，它屬於分散式版本控制系統（DVCS）類別，並且是免費和開源的。無論名稱或類型如何，版本控制系統的主要優勢如下：
 
-There are many choices, but here we are going to focus on just one, Git.
+1. **完整的長期變更歷史**：  
+   每個文件的變更，包括文件的創建、刪除和內容編輯，都會被記錄。不同 VCS 對文件重命名和移動的處理能力有所差異。歷史記錄中應包括作者、日期及每次更改的目的說明。完整的歷史記錄對分析問題根源、修復舊版軟體中的問題至關重要。
+
+2. **分支與合併**：  
+   分支允許開發者同時進行不同的工作流而不影響彼此。VCS 的分支功能可保持多條工作線程的獨立性，並提供合併功能以確認改動不衝突。許多團隊會採用按功能或發布分支的方式運作。
+
+3. **可追溯性**：  
+   每次代碼變更都可以追溯並與項目管理或問題追蹤工具（如 Jira）聯繫，為每次更改添加描述信息。這對於理解代碼設計背後的意圖、處理遺留代碼，以及準確估算未來工作量都十分有幫助。
+
+---
+
+雖然理論上可以不使用版本控制來開發軟體，但這樣的風險是專業團隊無法接受的。問題不在於是否使用版本控制，而是應選擇哪種系統。在眾多選擇中，我們將聚焦於 Git。
+
+{% include elements/button.html link="how-to-undo-your-git-failure" text="Git 新手完全指南" %}
