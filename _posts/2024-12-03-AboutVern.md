@@ -20,7 +20,7 @@ description: OC介紹
 ../assets/imgs/Vern/Vern.jpg
 ../assets/imgs/Vern/Vern-2.jpg
 {% endcapture %}
-{% include elements/carousel.html id="carousel1" style="border: 2px solid #000;width: 50%;margin: auto;display: block;" %}
+{% include elements/carousel.html id="carousel1" style="border: 2px solid #000;margin: auto;display: block;" %}
 <br>
 <br>
 <br>
@@ -77,7 +77,7 @@ description: OC介紹
 ../assets/imgs/Vern/VernRe10.jpg
 ../assets/imgs/Vern/VernRe11.jpg
 {% endcapture %}
-{% include elements/carousel.html id="carousel2" style="border: 2px solid #000;width: 50%;margin: auto;display: block;" %}
+{% include elements/carousel.html id="carousel2" style="border: 2px solid #000;margin: auto;display: block;" %}
 
 <br>
 <br>
