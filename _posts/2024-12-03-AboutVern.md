@@ -27,7 +27,7 @@ description: OC介紹
 
 <details>
   <summary>設定文字補充</summary>
-
+<br>
 - 眉毛短短的<br>
 - 單眼皮<br>
 - 左眼底下有兩顆痣<br>
@@ -49,9 +49,9 @@ description: OC介紹
 - 萌萌的<br>
 - 笨笨的<br>
 - 小可愛!!!<br>
-
+<br>
 </details>
-
+<br>
 > #### 【色碼】
 
 #D8D8D8 <br>
