@@ -3,7 +3,7 @@
   color: info
 
 - name: Javascript
-  percentage: 30
+  percentage: 40
   color:
 
 - name: Python/C++

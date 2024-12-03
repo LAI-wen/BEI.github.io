@@ -2,8 +2,13 @@ html {
   padding-left: calc(100vw - 100%);
 }
 
+@font-face {
+  font-family: "匯文明朝體";
+  src: url("../fonts/匯文明朝體.otf") format("woff2");
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "匯文明朝體", sans-serif;
 }
 
 .badge {
