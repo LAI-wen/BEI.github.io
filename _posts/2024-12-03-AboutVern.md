@@ -8,7 +8,7 @@ description: OC介紹
 
 > 熱愛編織美麗事物的美麗人類
 
-{% include elements/figure.html image="/assets/imgs/Vern/vern.png" caption="Vern" style="border: 2px solid blue;width: 50%;" %}
+{% include elements/figure.html image="/assets/imgs/Vern/vern.webp" caption="Vern" style="border: 2px solid blue;width: 50%;" %}
 
 > ### 外型設定
 
@@ -17,8 +17,8 @@ description: OC介紹
 <br>
 
 {% capture carousel_images %}
-../assets/imgs/Vern/Vern.jpg
-../assets/imgs/Vern/Vern-2.jpg
+../assets/imgs/Vern/Vern.webp
+../assets/imgs/Vern/Vern-2.webp
 {% endcapture %}
 {% include elements/carousel.html id="carousel1" style="border: 2px solid #000;margin: auto;display: block;" %}
 <br>
@@ -65,17 +65,16 @@ description: OC介紹
 <br>
 
 {% capture carousel_images %}
-../assets/imgs/Vern/VernRe1.jpg
-../assets/imgs/Vern/VernRe2.jpg
-../assets/imgs/Vern/VernRe3.jpg
-../assets/imgs/Vern/VernRe4.jpg
-../assets/imgs/Vern/VernRe5.jpg
-../assets/imgs/Vern/VernRe6.jpg
-../assets/imgs/Vern/VernRe7.jpg
-../assets/imgs/Vern/VernRe8.jpg
-../assets/imgs/Vern/VernRe9.jpg
-../assets/imgs/Vern/VernRe10.jpg
-../assets/imgs/Vern/VernRe11.jpg
+https://i.pinimg.com/736x/bd/57/a9/bd57a91973ad395e7f06bdd2c875655b.jpg
+https://i.pinimg.com/736x/51/bf/9d/51bf9dc9e4d41f296a43a6df1632a046.jpg
+https://i.pinimg.com/736x/73/ac/f2/73acf2cfc0016ff6bbeb30412722d5f2.jpg
+https://i.pinimg.com/736x/a8/9a/c8/a89ac8d34a0e77f327a27323e87c946f.jpg
+https://i.pinimg.com/736x/0c/43/95/0c43951d739ab555d1a6f03ff9d862f5.jpg
+https://i.pinimg.com/236x/fc/88/70/fc8870b9dd8b2130624340f00f2e8c5a.jpg
+https://i.pinimg.com/736x/60/dc/69/60dc693dc8f925c8a56f1d8d7cce1e9f.jpg
+https://i.pinimg.com/736x/42/a4/f9/42a4f9121a6e66d3752103e0e4eea228.jpg
+https://i.pinimg.com/736x/1c/fd/84/1cfd843c7255b06f6df4565d045bf51a.jpg
+
 {% endcapture %}
 {% include elements/carousel.html id="carousel2" style="border: 2px solid #000;margin: auto;display: block;" %}
 
