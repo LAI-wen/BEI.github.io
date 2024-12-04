@@ -8,9 +8,9 @@ description: OC介紹
 
 > 熱愛編織美麗事物的美麗人類
 
-{% include elements/figure.html image="/assets/imgs/Vern/vern.png" caption="Vern" style="border: 2px solid blue;width: 50%;" %}
+{% include elements/figure.html image="/assets/imgs/Vern/vern.png" caption="Vern" style="border: 2px solid #000;width: 70%;" %}
 
-> ### 外型設定
+### 外型設定
 
 ---
 
@@ -21,7 +21,6 @@ description: OC介紹
 ../assets/imgs/Vern/Vern-2.webp
 {% endcapture %}
 {% include elements/carousel.html id="carousel1" style="border: 2px solid #000;margin: auto;display: block;" %}
-<br>
 <br>
 <br>
 
@@ -40,7 +39,7 @@ description: OC介紹
 - 長髮及腰有一點自然捲<br>
   <br>
 - 皮膚白<br>
-- 眼睛黑灰 \*異色可以畫金色<br>
+- 眼睛黑灰 *異色可以畫金色<br>
 - 髮色是很白的粉<br>
 - 私心很喜歡復古風/繽紛玩具<br>
 - 喜歡粉藍色<br>
@@ -54,13 +53,13 @@ description: OC介紹
 <br>
 > #### 【色碼】
 
-#D8D8D8 <br>
-#F5EFEF <br>
-#B8CEB7
+<p style="background-color: #D8D8D8;"> #D8D8D8</p>
+<p style="background-color: #F5EFEF;"> #F5EFEF</p>
+<p style="background-color: #B8CEB7;"> #B8CEB7</p>
 
+<br>
+<br>
 #### 【參考服裝】
-
----
 
 <br>
 
@@ -86,6 +85,9 @@ https://i.pinimg.com/736x/1c/fd/84/1cfd843c7255b06f6df4565d045bf51a.jpg
 
 #唱詩班 #觀星者 #百合花 #童話故事 #天使 #鏡子#沙漏 #玻璃罩 #音樂盒 #天秤 #時鐘 #鎖 #標本 #玩具屋 #牧羊人#原宿風
 
+<br>
+<br>
+
 #### 【A little 穿搭偏好】
 
 - 喜歡針織、蕾絲、繩編的配件與服裝
@@ -96,4 +98,25 @@ https://i.pinimg.com/736x/1c/fd/84/1cfd843c7255b06f6df4565d045bf51a.jpg
 - 會捲頭髮
 - 喜歡掛一堆繩子與鏈子
 
-{% include elements/highlight.html text="* 參考僅供參考\* 環境光/繪師風格之色差/換裝/造型 ok" %}
+{% include elements/highlight.html text="* 參考僅供參考* 環境光/繪師風格之色差/換裝/造型 ok" %}
+
+<br>
+<br>
+
+### 故事與設定
+
+---
+
+> #### 基本資料
+>
+> Name | Vernon <br>
+> Age | 17y<br>
+> 笨蛋美人，沉浸在自己喜歡的事物中，不太擅長社交，網路上有很多粉絲。小羊。<br>
+> 出生 | 安安靜靜<br>
+
+Friday, April 9, Cloudy<br>
+My name is Vernon. My birthday is June 14, I was born in ⏹︎⏹︎⏹︎, I live in ⏹︎⏹︎ now, I very like here!I like autumn. My best friend is Lex.
+<br>
+<br>
+(待解鎖)<br>
+(待解鎖)
