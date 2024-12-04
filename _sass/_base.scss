@@ -2,14 +2,21 @@ html {
   padding-left: calc(100vw - 100%);
 }
 
-@font-face {
-  font-family: "京華老宋体";
-  src: url("../fonts/京華老宋体v2.002.woff") format("woff2");
-}
+@import url("https://static.zeoseven.com/zsft/309/main/result.css");
 
 body {
-  font-family: "京華老宋体", sans-serif;
+  font-family: "KingHwa_OldSong";
+  font-weight: normal;
 }
+
+// @font-face {
+//   font-family: "京華老宋体";
+//   src: url("../fonts/京華老宋体v2.002.woff") format("woff2");
+// }
+
+// body {
+//   font-family: "京華老宋体", sans-serif;
+// }
 
 .badge {
   font-weight: 500;
