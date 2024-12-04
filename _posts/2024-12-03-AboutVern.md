@@ -8,7 +8,7 @@ description: OC介紹
 
 > 熱愛編織美麗事物的美麗人類
 
-{% include elements/figure.html image="/assets/imgs/Vern/vern.webp" caption="Vern" style="border: 2px solid blue;width: 50%;" %}
+{% include elements/figure.html image="/assets/imgs/Vern/vern.png" caption="Vern" style="border: 2px solid blue;width: 50%;" %}
 
 > ### 外型設定
 
