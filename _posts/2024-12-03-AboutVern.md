@@ -8,7 +8,7 @@ description: OC介紹
 
 > 熱愛編織美麗事物的美麗人類
 
-{% include elements/figure.html image="/assets/imgs/Vern/vern.png" caption="Vern" style="border: 2px solid #000;width: 70%;" %}
+{% include elements/figure.html image="/assets/imgs/Vern/VernWithF.webp" caption="Vern" style="width: 50%;" %}
 
 ### 外型設定
 
@@ -75,7 +75,7 @@ https://i.pinimg.com/736x/42/a4/f9/42a4f9121a6e66d3752103e0e4eea228.jpg
 https://i.pinimg.com/736x/1c/fd/84/1cfd843c7255b06f6df4565d045bf51a.jpg
 
 {% endcapture %}
-{% include elements/carousel.html id="carousel2" style="border: 2px solid #000;margin: auto;display: block;" %}
+{% include elements/carousel.html id="carousel2" style="margin: auto;display: block;" %}
 
 <br>
 <br>
@@ -100,8 +100,18 @@ https://i.pinimg.com/736x/1c/fd/84/1cfd843c7255b06f6df4565d045bf51a.jpg
 
 {% include elements/highlight.html text="* 參考僅供參考* 環境光/繪師風格之色差/換裝/造型 ok" %}
 
+#### 【更衣室】
+
+{% include elements/figure.html image="/assets/imgs/Vern/Verndream.gif" caption="換裝 BY焗烤餓夢" style="width: 70%;" %}
+
 <br>
-<br>
+
+{% capture carousel_images %}
+../assets/imgs/Vern/1.png
+../assets/imgs/Vern/2.webp
+../assets/imgs/Vern/3.webp
+{% endcapture %}
+{% include elements/carousel.html id="carousel3" style="margin: auto;display: block;" %}
 
 ### 故事與設定
 
@@ -120,3 +130,15 @@ My name is Vernon. My birthday is June 14, I was born in ⏹︎⏹︎⏹︎, I l
 <br>
 (待解鎖)<br>
 (待解鎖)
+
+小羊喜歡很特別的是活在自己的世界，和世界格格不入，像是隔著一道真空層似的。
+
+他不能說是不迷惘，但在眾人眼中他的煩惱小的很可愛。
+
+小羊的家庭很溫暖也很有距離，人們絕對是溫柔的，但又有著不干涉的默契與信任，他們會一起上教會，但不會主動插手「家人」的生活。
+
+專長是手工、打扮，超喜歡娃娃和編織，也喜歡拍照。有當模特兒的經驗。
+
+來到村子的理由僅僅是因為被家人問了要不要一起走。
+
+家人們認為小羊很適合鄉村生活。
