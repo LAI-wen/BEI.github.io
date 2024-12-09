@@ -1,6 +1,7 @@
 <figure class="figure w-100">
   <img
     src="{{ include.image | relative_url }}"
+    id="{{ include.id }}"
     class="figure-img img-fluid rounded"
     alt="{{ include.alt | default: include.caption }}"
     style="{{ include.style }}"

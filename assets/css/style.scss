@@ -10,11 +10,18 @@
   width: 50%; /* 手機寬度設為 50% */
 }
 
+.figure-img {
+  width: 70%; /* 手機寬度設為 50% */
+}
+
 @media screen and (max-width: 768px) {
   /* 手機 */
   #carousel-carousel2,
   #carousel-carousel1,
   #carousel-carousel3 {
     width: 100%; /* 手機寬度設為 100% */
+  }
+  .figure-img {
+    width: 100%; /* 手機寬度設為 50% */
   }
 }

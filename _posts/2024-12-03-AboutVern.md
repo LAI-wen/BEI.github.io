@@ -104,7 +104,7 @@ https://i.pinimg.com/736x/1c/fd/84/1cfd843c7255b06f6df4565d045bf51a.jpg
 
 #### 【更衣室】
 
-{% include elements/figure.html image="/assets/imgs/Vern/Verndream.gif" caption="換裝 BY焗烤餓夢" style="width: 70%;" %}
+{% include elements/figure.html image="/assets/imgs/Vern/Verndream.gif" caption="換裝 BY焗烤餓夢"  %}
 
 <br>
 

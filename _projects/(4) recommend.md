@@ -10,6 +10,12 @@ external_url:
 
 ## 🅳🅸🆁🅴🅲🆃🅾🆁🆈
 
+![alt text](../assets/imgs/23_cheesecake_dish.png "Building Image")
+
+<p class="text-center">
+{% include elements/button.html link="../blog/Cafes_To_Visit" text="咖啡廳探索日" %}
+</p>
+
 小說
 
 漫畫
